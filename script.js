@@ -41,10 +41,30 @@ document.addEventListener("DOMContentLoaded", function () {
   imagesLoaded(grid, function () {
     msnry = new Masonry(grid, {
       itemSelector: ".grid-item",
-      columnWidth: 320,
+      columnWidth: 300,
       gutter: 16,
       fitWidth: true,
     })
     lazyload()
   })
 })
+
+// window.lightbox = lightbox;
+
+// window.lightbox.option({
+//   disableScrolling: true,
+//   fadeDuration: 200,
+//   //other
+//   albumLabel: "ギャラリー： %1 of %2",
+//   disableScrolling: false,
+//   fadeDuration: 600,
+//   fitImagesInViewport: true,
+//   imageFadeDuration: 600,
+//   maxWidth: 400,
+//   maxHeight: 400,
+//   alwaysShowNavOnTouchDevices: false,
+//   positionFromTop: 50,
+//   resizeDuration: 700,
+//   showImageNumberLabel: true,
+//   wrapAround: false
+// });

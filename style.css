@@ -19,12 +19,12 @@ body {
 }
 
 .grid {
-  max-width: 1440px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 .grid-item {
-  width: 320px;
+  width: 300px;
   margin-bottom: 10px;
 }
 
@@ -36,4 +36,17 @@ body {
 .lazy {
   filter: blur(10px);
   transition: filter 1s;
+}
+
+@media screen and (max-width: 568px) {
+  .grid {
+    width: fit-content !important;
+  }
+
+  .grid-item {
+    margin-bottom: 10px;
+    position: initial !important;
+    margin: auto;
+    width: 96vw !important;
+  }
 }
