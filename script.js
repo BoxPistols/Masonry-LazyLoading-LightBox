@@ -1,4 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
+jQuery(document).ready(function ($) {
+  // Lightboxのオプション設定
+  lightbox.option({
+    fadeDuration: 200,
+    resizeDuration: 100,
+    fitImagesInViewport: true,
+    disableScrolling: true,
+    wrapAround: true,
+    onOpen: function () {
+      $("html").addClass("lightbox-open")
+    },
+    onClose: function () {
+      $("html").removeClass("lightbox-open")
+    },
+  })
+
+  // document.addEventListener("DOMContentLoaded", function () {
   var grid = document.querySelector(".grid")
   var msnry
   var lazyloadImages = document.querySelectorAll("img.lazy")
@@ -20,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
           lazyloadImages = Array.prototype.filter.call(
             lazyloadImages,
-            function (image, i) {
+            function (_image, i) {
               return i !== index
             }
           )
@@ -33,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 20)
   }
-
   document.addEventListener("scroll", lazyload)
   window.addEventListener("resize", lazyload)
   window.addEventListener("orientationChange", lazyload)
@@ -48,23 +63,3 @@ document.addEventListener("DOMContentLoaded", function () {
     lazyload()
   })
 })
-
-// window.lightbox = lightbox;
-
-// window.lightbox.option({
-//   disableScrolling: true,
-//   fadeDuration: 200,
-//   //other
-//   albumLabel: "ギャラリー： %1 of %2",
-//   disableScrolling: false,
-//   fadeDuration: 600,
-//   fitImagesInViewport: true,
-//   imageFadeDuration: 600,
-//   maxWidth: 400,
-//   maxHeight: 400,
-//   alwaysShowNavOnTouchDevices: false,
-//   positionFromTop: 50,
-//   resizeDuration: 700,
-//   showImageNumberLabel: true,
-//   wrapAround: false
-// });
