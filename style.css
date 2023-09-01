@@ -15,16 +15,16 @@ body {
 
 .wrap {
   margin: 2vh auto;
-  max-width: 1366px;
+  max-width: 1440px;
 }
 
 .grid {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .grid-item {
-  width: 300px;
+  width: 320px;
   margin-bottom: 10px;
 }
 
