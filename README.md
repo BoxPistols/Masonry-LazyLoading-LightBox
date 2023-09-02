@@ -1,4 +1,4 @@
-# Mosonry-LazyLoading-LightBox
+# Masonry-LazyLoading-LightBox
 Mosonry Lazy Loading LightBox Gallery
 
 
